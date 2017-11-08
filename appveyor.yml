@@ -1,0 +1,56 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+
+
+environment:
+  matrix:
+    - PlatformToolset: v140
+    #- PlatformToolset: v141
+
+platform:
+    - Any CPU
+
+configuration:
+    - Release
+    #- Debug
+
+
+install:
+    - nuget restore "%APPVEYOR_BUILD_FOLDER%"\WpfClipboardMonitorDocumentation\packages.config -PackagesDirectory "%APPVEYOR_BUILD_FOLDER%"\packages
+
+
+build_script:
+    - cd "%APPVEYOR_BUILD_FOLDER%"
+    - msbuild WpfClipboardMonitor.sln /m /p:configuration="%configuration%" /p:platform="%platform%" /p:PlatformToolset="%PlatformToolset%" /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+
+after_build:
+    - cd "%APPVEYOR_BUILD_FOLDER%"
+    - ps: >-
+        Push-AppveyorArtifact "WpfClipboardMonitor\bin\$env:CONFIGURATION\WpfClipboardMonitor.dll" -FileName WpfClipboardMonitor.dll
+
+        Push-AppveyorArtifact "ImageCatcherMember\bin\$env:CONFIGURATION\ImageCatcher.exe" -FileName ImageCatcher.exe
+
+        Push-AppveyorArtifact "WpfClipboardMonitorDocumentation\Help\WpfClipboardMonitor.chm" -FileName WpfClipboardMonitor.chm
+
+
+        if ($($env:APPVEYOR_REPO_TAG) -eq "true" -and $env:CONFIGURATION -eq "Release" -and $env:PLATFORMTOOLSET -eq "v140") {
+            $ZipFileName = "WpfClipboardMonitor_$($env:APPVEYOR_REPO_TAG_NAME).zip"
+            7z a $ZipFileName WpfClipboardMonitor\bin\$env:CONFIGURATION\WpfClipboardMonitor.dll
+        }
+
+artifacts:
+  - path: WpfClipboardMonitor_*.zip
+    name: releases
+
+deploy:
+    provider: GitHub
+    auth_token:
+        secure: !!TODO, see https://www.appveyor.com/docs/deployment/github/#provider-settings!!
+    artifact: releases
+    draft: false
+    prerelease: false
+    force_update: true
+    on:
+        appveyor_repo_tag: true
+        PlatformToolset: v140
+        configuration: Release

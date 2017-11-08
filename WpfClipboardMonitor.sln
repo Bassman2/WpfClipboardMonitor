@@ -14,6 +14,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCatcherOverride", "ImageCatcherOverride\ImageCatcherOverride.csproj", "{DC34D9F2-CF25-4A17-9738-34E6F5C18348}"
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "WpfClipboardMonitorDocumentation", "WpfClipboardMonitorDocumentation\WpfClipboardMonitorDocumentation.shfbproj", "{505B0644-89B7-424D-88BE-9949C6D6FF9A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{64F9FA98-B57C-4AE0-9C31-A72F74FC2D51} = {64F9FA98-B57C-4AE0-9C31-A72F74FC2D51}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
