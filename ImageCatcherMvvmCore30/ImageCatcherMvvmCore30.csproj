@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <Import Project="..\ImageCatcherMvvmShare\ImageCatcherMvvmShare.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <ProjectReference Include="..\WpfClipboardMonitorCore30\WpfClipboardMonitorCore30.csproj" />
+  </ItemGroup>
+
+</Project>
