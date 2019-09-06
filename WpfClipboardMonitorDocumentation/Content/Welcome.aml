@@ -9,7 +9,7 @@
       <title>Example: Clipboard Monitor as member</title>
       <content>
         <para>The ClipboardMonitor class can be used as a member of your main window.</para>
-        <code language="c#" source="..\ImageCatcherMember\MainWindow.xaml.cs" title="MainWindow.xaml.cs"/>
+        <code language="c#" source="..\ImageCatcherMemberShare\MainWindow.xaml.cs" title="MainWindow.xaml.cs"/>
       </content>
     </section>
     
@@ -17,8 +17,8 @@
       <title>Example: Clipboard Monitor as window derived class with event</title>
       <content>
         <para>The ClipboardMonitarWindow class can be used as the base of your MainWindow with event handling.</para>
-        <code language="xaml" source="..\ImageCatcherEvent\MainWindow.xaml" title="MainWindow.xaml"/>
-        <code language="c#" source="..\ImageCatcherEvent\MainWindow.xaml.cs" title="MainWindow.xaml.cs"/>
+        <code language="xaml" source="..\ImageCatcherEventShare\MainWindow.xaml" title="MainWindow.xaml"/>
+        <code language="c#" source="..\ImageCatcherEventShare\MainWindow.xaml.cs" title="MainWindow.xaml.cs"/>
       </content>
     </section>
 
@@ -26,8 +26,8 @@
       <title>Example: Clipboard Monitor as window derived class with method override</title>
       <content>
         <para>The ClipboardMonitarWindow class can be used as the base of your MainWindow with a overwritten method.</para>
-        <code language="xaml" source="..\ImageCatcherOverride\MainWindow.xaml" title="MainWindow.xaml"/>
-        <code language="c#" source="..\ImageCatcherOverride\MainWindow.xaml.cs" title="MainWindow.xaml.cs"/>
+        <code language="xaml" source="..\ImageCatcherOverrideShare\MainWindow.xaml" title="MainWindow.xaml"/>
+        <code language="c#" source="..\ImageCatcherOverrideShare\MainWindow.xaml.cs" title="MainWindow.xaml.cs"/>
       </content>
     </section>
 
@@ -35,8 +35,8 @@
       <title>Example: Clipboard Monitor as window derived class in a MVVM environment</title>
       <content>
         <para>The ClipboardMonitarWindow class can be used as the base of your MainWindow with a command for MVVM architecture.</para>
-        <code language="xaml" source="..\ImageCatcherMvvm\MainView.xaml" title="MainView.xaml"/>
-        <code language="c#" source="..\ImageCatcherMvvm\MainViewModel.cs" title="MainViewModel.cs"/>
+        <code language="xaml" source="..\ImageCatcherMvvmShare\MainView.xaml" title="MainView.xaml"/>
+        <code language="c#" source="..\ImageCatcherMvvmShare\MainViewModel.cs" title="MainViewModel.cs"/>
       </content>
     </section>
 
