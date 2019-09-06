@@ -40,6 +40,20 @@
       </content>
     </section>
 
+	<section>
+			<title>Donate</title>
+			<content>
+				<para>You are welcome to support this project.</para>
+				<para>
+					<markup>
+						<a href="https://www.paypal.me/GBassman" target="_blank">
+							<img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" alt="Donate" />
+						</a>
+						</markup>
+				</para>
+			</content>
+		</section>
+		
 		<relatedTopics>
 			<link xlink:href="b456dacb-1cca-402f-9d1b-4fc3447d4846" />
 		</relatedTopics>
