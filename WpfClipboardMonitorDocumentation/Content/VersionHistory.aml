@@ -5,20 +5,28 @@
 			<para>The topics in this section describe the various changes made to the WPF Clipboard Monitor over the life of the project.</para>
 		</introduction>
 
-		<section>
-			<title>Version History</title>
-			<content>
-				<para>Select a version below to see a description of its changes.</para>
+    <section>
+      <title>Version 1.0 was released on Jan 17, 2017.</title>
+      <content>
+        <list class="bullet">
+          <listItem>
+            <para>Creation</para>
+          </listItem>
+        </list>
+      </content>
+    </section>
 
-				<list class="bullet">
-					<listItem>
-						<para><link xlink:href="5835eedd-53e3-42a6-8b70-7b85094395ca" /></para>
-					</listItem>
-				</list>
-
-			</content>
-		</section>
-
+    <section>
+      <title>Version 1.1 was released on Sep 6, 2019.</title>
+      <content>
+        <list class="bullet">
+          <listItem>
+            <para>Support for .Net Core 3.0.</para>
+          </listItem>
+        </list>
+      </content>
+    </section>
+    
 		<relatedTopics>
 			<link xlink:href="ef3e50b7-de80-4612-b398-e61c2faa511f" />
 		</relatedTopics>
