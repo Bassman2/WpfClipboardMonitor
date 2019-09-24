@@ -1,11 +1,10 @@
-version: 1.0.{build}
-image: Visual Studio 2017
+version: 1.1.{build}
+image: Visual Studio 2019
 
 
 environment:
   matrix:
-    #- PlatformToolset: v140
-    - PlatformToolset: v141
+    - PlatformToolset: v142
 
 platform:
     - Any CPU
@@ -18,14 +17,14 @@ configuration:
 
 build_script:
     - cd "%APPVEYOR_BUILD_FOLDER%"
-    - msbuild WpfClipboardMonitor.sln /m /verbosity:minimal /t:WpfClipboardMonitor;ImageCatcherEvent;ImageCatcherMember;ImageCatcherMvvm;ImageCatcherOverride /p:configuration="%configuration%" /p:platform="%platform%" /p:PlatformToolset="%PlatformToolset%" /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+    - msbuild WpfClipboardMonitor.sln /m /verbosity:minimal /t:WpfClipboardMonitorFramework40;WpfClipboardMonitorCore30;ImageCatcherEventFramework40;ImageCatcherEventCore30;ImageCatcherMemberFramework40;ImageCatcherMemberCore30;ImageCatcherMvvmFramework40;ImageCatcherMvvmCore30;ImageCatcherOverrideFramework40;ImageCatcherOverrideCore30 /p:configuration="%configuration%" /p:platform="%platform%" /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
 # after_build:
     # - cd "%APPVEYOR_BUILD_FOLDER%"
     # - ps: >-
         # Push-AppveyorArtifact "WpfClipboardMonitor\bin\$env:CONFIGURATION\WpfClipboardMonitor.dll" -FileName WpfClipboardMonitor.dll
 
-        # if ($($env:APPVEYOR_REPO_TAG) -eq "true" -and $env:CONFIGURATION -eq "Release" -and $env:PLATFORMTOOLSET -eq "v141") {
+        # if ($($env:APPVEYOR_REPO_TAG) -eq "true" -and $env:CONFIGURATION -eq "Release" -and $env:PLATFORMTOOLSET -eq "v142") {
             # $ZipFileName = "WpfClipboardMonitor_$($env:APPVEYOR_REPO_TAG_NAME).zip"
             # 7z a $ZipFileName WpfClipboardMonitor\bin\$env:CONFIGURATION\WpfClipboardMonitor.dll
         # }
@@ -44,5 +43,5 @@ build_script:
     # force_update: true
     # on:
         # appveyor_repo_tag: true
-        # PlatformToolset: v141
+        # PlatformToolset: v142
         # configuration: Release
