@@ -16,8 +16,8 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v1
 
-    - name: Setup to add MSBuild.exe to path
-      uses: warrenbuckley/Setup-MSBuild@v1
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.0
 
     - name: "Download and install sandcastle"
       run: |
@@ -44,9 +44,21 @@ jobs:
            $env:SHFBROOT = "C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
            msbuild WpfClipboardMonitor.sln /m /verbosity:minimal /p:configuration="${{ matrix.build_configuration }}" /p:platform="${{ matrix.build_platform }}"
 
+    - name: Setup NuGet.exe
+      if: matrix.build_configuration == 'Release'
+      uses: nuget/setup-nuget@v1
+
+    - name: Build NuGet package
+      if: matrix.build_configuration == 'Release'
+      working-directory: .
+      run: |
+           cd .\Nuget
+           nuget pack WpfClipboardMonitor.nuspec -properties Configuration=${{ matrix.build_configuration }}
+
     - name: Archive artifacts
+      if: matrix.build_configuration == 'Release'
       uses: actions/upload-artifact@v1
       with:
-          name: WpfClipboardMonitorFramework40
-          path: WpfClipboardMonitorFramework40\bin\${{ matrix.build_configuration }}\WpfClipboardMonitor.dll
+          name: WpfClipboardMonitor.1.1.0.nupkg
+          path: Nuget\WpfClipboardMonitor.1.1.0.nupkg
 

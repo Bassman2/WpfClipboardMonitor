@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>D:\Privat\Projects\WpfClipboardMonitor\WpfClipboardMonitorCore30\WpfClipboardMonitor.xml</DocumentationFile>
+    <DocumentationFile>.\WpfClipboardMonitor.xml</DocumentationFile>
   </PropertyGroup>
 
   <Import Project="..\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems" Label="Shared" />
