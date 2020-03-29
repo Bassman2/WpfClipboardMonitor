@@ -11,9 +11,9 @@ configuration:
 
 install:
     - ps: >-
-        Start-FileDownload 'https://github.com/EWSoftware/SHFB/releases/download/v2019.9.15.0/SHFBInstaller_v2019.9.15.0.zip'
+        Start-FileDownload 'https://github.com/EWSoftware/SHFB/releases/download/v2020.3.6.0/SHFBInstaller_v2020.3.6.0.zip'
 
-        7z x -y SHFBInstaller_v2019.9.15.0.zip | Out-Null
+        7z x -y SHFBInstaller_v2020.3.6.0.zip | Out-Null
 
         Write-Host "Installing MSI..."
 
@@ -21,7 +21,7 @@ install:
 
         Write-Host "Installing VSIX..."
 
-        . "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\VSIXInstaller.exe" /q /a InstallResources\SHFBVisualStudioPackage_VS2015AndLater.vsix
+        . "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\VSIXInstaller.exe" /q /a InstallResources\SHFBVisualStudioPackage_VS2017AndLater.vsix
 
         Write-Host "Sandcastle installed" -ForegroundColor Green
 
