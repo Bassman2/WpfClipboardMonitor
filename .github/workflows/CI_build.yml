@@ -14,7 +14,7 @@ jobs:
         
     steps:
     - name: Checkout repo
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
 
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1
@@ -81,4 +81,5 @@ jobs:
            msbuild WpfClipboardMonitor.sln -p:Configuration="${{ matrix.build_configuration }}"
 
 #           -ignoreProjectExtensions:.shfbproj
+
 

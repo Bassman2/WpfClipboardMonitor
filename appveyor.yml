@@ -1,4 +1,4 @@
-version: 1.1.{build}
+version: 1.2.{build}
 image: Visual Studio 2019
 
 
@@ -10,6 +10,12 @@ configuration:
     - Debug
 
 install:
+
+    - copy /y "%APPVEYOR_BUILD_FOLDER%"\DummySignKey.snk "%APPVEYOR_BUILD_FOLDER%"\Src\WpfClipboardMonitor50\Bassman.snk
+    - copy /y "%APPVEYOR_BUILD_FOLDER%"\DummySignKey.snk "%APPVEYOR_BUILD_FOLDER%"\Src\WpfClipboardMonitor60\Bassman.snk
+    - copy /y "%APPVEYOR_BUILD_FOLDER%"\DummySignKey.snk "%APPVEYOR_BUILD_FOLDER%"\Src\WpfClipboardMonitorCore31\Bassman.snk
+    - copy /y "%APPVEYOR_BUILD_FOLDER%"\DummySignKey.snk "%APPVEYOR_BUILD_FOLDER%"\Src\WpfClipboardMonitorFramework40\Bassman.snk
+
     - ps: >-
         Start-FileDownload 'https://github.com/EWSoftware/SHFB/releases/download/v2021.4.9.0/SHFBInstaller_v2021.4.9.0.zip'
 
