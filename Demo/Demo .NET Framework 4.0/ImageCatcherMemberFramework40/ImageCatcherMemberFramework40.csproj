@@ -72,7 +72,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\WpfClipboardMonitor\WpfClipboardMonitorFramework40\WpfClipboardMonitorFramework40.csproj">
+    <ProjectReference Include="..\..\..\Src\WpfClipboardMonitorFramework40\WpfClipboardMonitorFramework40.csproj">
       <Project>{6bddb3e3-26f2-4544-a722-d0037f804553}</Project>
       <Name>WpfClipboardMonitorFramework40</Name>
     </ProjectReference>

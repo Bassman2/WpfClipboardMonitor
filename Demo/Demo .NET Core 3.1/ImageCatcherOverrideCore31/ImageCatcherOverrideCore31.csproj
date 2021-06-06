@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\WpfClipboardMonitor\WpfClipboardMonitorCore31\WpfClipboardMonitorCore31.csproj" />
+    <ProjectReference Include="..\..\..\Src\WpfClipboardMonitorCore31\WpfClipboardMonitorCore31.csproj" />
   </ItemGroup>
 
   <Import Project="..\..\Demo Share\ImageCatcherOverrideShare\ImageCatcherOverrideShare.projitems" Label="Shared" />
