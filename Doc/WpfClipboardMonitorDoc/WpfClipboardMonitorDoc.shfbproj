@@ -9,9 +9,9 @@
     <ProjectGuid>505b0644-89b7-424d-88be-9949c6d6ff9a</ProjectGuid>
     <SHFBSchemaVersion>2017.9.26.0</SHFBSchemaVersion>
     <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual Studio adds them anyway -->
-    <AssemblyName>WpfClipboardMonitorDocumentation</AssemblyName>
-    <RootNamespace>WpfClipboardMonitorDocumentation</RootNamespace>
-    <Name>WpfClipboardMonitorDocumentation</Name>
+    <AssemblyName>WpfClipboardMonitorDoc</AssemblyName>
+    <RootNamespace>WpfClipboardMonitorDoc</RootNamespace>
+    <Name>WpfClipboardMonitorDoc</Name>
     <!-- SHFB properties -->
     <FrameworkVersion>.NET Core/.NET Standard/.NET 5.0+</FrameworkVersion>
     <OutputPath>.\Help\</OutputPath>
