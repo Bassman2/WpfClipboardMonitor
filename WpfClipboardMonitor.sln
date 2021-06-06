@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "WpfClipboardMonitorDocumentation", "WpfClipboardMonitorDocumentation\WpfClipboardMonitorDocumentation.shfbproj", "{505B0644-89B7-424D-88BE-9949C6D6FF9A}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WpfClipboardMonitorShare", "WpfClipboardMonitorShare\WpfClipboardMonitorShare.shproj", "{E0EC90C2-32BD-4E1F-AEFA-FB542E1604BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfClipboardMonitorFramework40", "WpfClipboardMonitorFramework40\WpfClipboardMonitorFramework40.csproj", "{6BDDB3E3-26F2-4544-A722-D0037F804553}"
@@ -36,6 +34,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCatcherOverrideCore30", "ImageCatcherOverrideCore30\ImageCatcherOverrideCore30.csproj", "{6434C43D-795D-44E0-B628-4E77B6DE88D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCatcherOverrideFramework40", "ImageCatcherOverrideFramework40\ImageCatcherOverrideFramework40.csproj", "{5A23E36D-80D7-40BF-8CF4-53B955B62A77}"
+EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "WpfClipboardMonitorDocumentation", "WpfClipboardMonitorDocumentation\WpfClipboardMonitorDocumentation.shfbproj", "{505B0644-89B7-424D-88BE-9949C6D6FF9A}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
