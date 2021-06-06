@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WpfClipboardMonitor50</name>
+    </assembly>
+    <members>
+        <member name="T:WpfClipboardMonitor.ClipboardMonitor">
+            <summary>
+            Clipboard Monitor class to notify if the clipboard content changes
+            </summary>
+        </member>
+        <member name="E:WpfClipboardMonitor.ClipboardMonitor.ClipboardUpdate">
+            <summary>
+            Event for clipboard update notification.
+            </summary>
+        </member>
+        <member name="M:WpfClipboardMonitor.ClipboardMonitor.#ctor(System.Windows.Window,System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="window">Main window of the application.</param>
+            <param name="start">Enable clipboard notification on startup or not.</param>
+        </member>
+        <member name="M:WpfClipboardMonitor.ClipboardMonitor.Start">
+            <summary>
+            Enable clipboard notification.
+            </summary>
+        </member>
+        <member name="M:WpfClipboardMonitor.ClipboardMonitor.Stop">
+            <summary>
+            Disable clipboard notification.
+            </summary>
+        </member>
+        <member name="T:WpfClipboardMonitor.ClipboardMonitorWindow">
+            <summary>
+            Clipboard Monitor window class
+            </summary>
+        </member>
+        <member name="E:WpfClipboardMonitor.ClipboardMonitorWindow.ClipboardUpdate">
+            <summary>
+            Event for clipboard update notification.
+            </summary>
+        </member>
+        <member name="M:WpfClipboardMonitor.ClipboardMonitorWindow.OnInitialized(System.EventArgs)">
+            <summary>
+            Raises the System.Windows.FrameworkElement.Initialized event. This method is
+            invoked whenever System.Windows.FrameworkElement.IsInitialized is set to true internally.
+            </summary>
+            <param name="e">The System.Windows.RoutedEventArgs that contains the event data.</param>
+        </member>
+        <member name="F:WpfClipboardMonitor.ClipboardMonitorWindow.ClipboardUpdateCommandProperty">
+            <summary>
+            Clipboard Update dependency property
+            </summary>
+        </member>
+        <member name="P:WpfClipboardMonitor.ClipboardMonitorWindow.ClipboardUpdateCommand">
+            <summary>
+            ICommand to be called on clipboard update.
+            </summary>
+        </member>
+        <member name="F:WpfClipboardMonitor.ClipboardMonitorWindow.ClipboardNotificationProperty">
+            <summary>
+            Clipboard Notification dependency property
+            </summary>
+        </member>
+        <member name="P:WpfClipboardMonitor.ClipboardMonitorWindow.ClipboardNotification">
+            <summary>
+            Enable clipboard notification.
+            </summary>
+        </member>
+        <member name="M:WpfClipboardMonitor.ClipboardMonitorWindow.OnClipboardUpdate">
+            <summary>
+            Override to handle clipboard notification.
+            </summary>
+        </member>
+        <member name="M:WpfClipboardMonitor.ClipboardMonitorWindow.Start">
+            <summary>
+            Enable clipboard notification.
+            </summary>
+        </member>
+        <member name="M:WpfClipboardMonitor.ClipboardMonitorWindow.Stop">
+            <summary>
+            Disable clipboard notification.
+            </summary>
+        </member>
+    </members>
+</doc>
