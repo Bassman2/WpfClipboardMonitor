@@ -9,6 +9,10 @@
     <DocumentationFile>C:\Projects\WpfClipboardMonitor\WpfClipboardMonitor\WpfClipboardMonitor50\WpfClipboardMonitor50.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Projects\WpfClipboardMonitor\Src\WpfClipboardMonitor50\WpfClipboardMonitor50.xml</DocumentationFile>
+  </PropertyGroup>
+
   <Import Project="..\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems" Label="Shared" />
 
 </Project>

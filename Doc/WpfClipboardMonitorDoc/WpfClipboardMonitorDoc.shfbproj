@@ -39,7 +39,7 @@
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <ComponentConfigurations />
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\..\WpfClipboardMonitor\WpfClipboardMonitor50\WpfClipboardMonitor50.csproj" />
+      <DocumentationSource sourceFile="..\..\Src\WpfClipboardMonitor50\WpfClipboardMonitor50.csproj" />
     </DocumentationSources>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="(global)" isDocumented="True" xmlns="" />
