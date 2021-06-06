@@ -11,9 +11,9 @@ configuration:
 
 install:
     - ps: >-
-        Start-FileDownload 'https://github.com/EWSoftware/SHFB/releases/download/v2020.3.6.0/SHFBInstaller_v2020.3.6.0.zip'
+        Start-FileDownload 'https://github.com/EWSoftware/SHFB/releases/download/v2021.4.9.0/SHFBInstaller_v2021.4.9.0.zip'
 
-        7z x -y SHFBInstaller_v2020.3.6.0.zip | Out-Null
+        7z x -y SHFBInstaller_v2021.4.9.0.zip | Out-Null
 
         Write-Host "Installing MSI..."
 
@@ -36,7 +36,7 @@ build_script:
 after_build:
      - cd "%APPVEYOR_BUILD_FOLDER%"
      - ps: >-
-        Push-AppveyorArtifact "Nuget\WpfClipboardMonitor.1.1.0.nupkg" -FileName WpfClipboardMonitor.1.1.0.nupkg
+        Push-AppveyorArtifact "Nuget\WpfClipboardMonitor.1.2.0.nupkg" -FileName WpfClipboardMonitor.1.2.0.nupkg
 
         # if ($($env:APPVEYOR_REPO_TAG) -eq "true" -and $env:CONFIGURATION -eq "Release") {
             # $ZipFileName = "WpfClipboardMonitor_$($env:APPVEYOR_REPO_TAG_NAME).zip"
