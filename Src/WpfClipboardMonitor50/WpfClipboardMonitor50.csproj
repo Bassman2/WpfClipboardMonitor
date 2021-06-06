@@ -5,11 +5,7 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>C:\Projects\WpfClipboardMonitor\WpfClipboardMonitor\WpfClipboardMonitor50\WpfClipboardMonitor50.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  <PropertyGroup>
     <DocumentationFile>C:\Projects\WpfClipboardMonitor\Src\WpfClipboardMonitor50\WpfClipboardMonitor50.xml</DocumentationFile>
   </PropertyGroup>
 
