@@ -7,6 +7,8 @@
 
   <PropertyGroup>
     <DocumentationFile>C:\Projects\WpfClipboardMonitor\Src\WpfClipboardMonitor50\WpfClipboardMonitor50.xml</DocumentationFile>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Bassman.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <Import Project="..\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems" Label="Shared" />
