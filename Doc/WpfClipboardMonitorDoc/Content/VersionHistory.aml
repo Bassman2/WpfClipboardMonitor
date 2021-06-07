@@ -26,6 +26,17 @@
         </list>
       </content>
     </section>
+
+    <section>
+      <title>Version 1.2 was released on Jun 7, 2019.</title>
+      <content>
+        <list class="bullet">
+          <listItem>
+            <para>Support for .Net 5.0 and 6.0</para>
+          </listItem>
+        </list>
+      </content>
+    </section>
     
 		<relatedTopics>
 			<link xlink:href="ef3e50b7-de80-4612-b398-e61c2faa511f" />

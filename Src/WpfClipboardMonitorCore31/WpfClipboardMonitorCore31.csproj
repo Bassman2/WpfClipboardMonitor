@@ -5,16 +5,17 @@
     <UseWPF>true</UseWPF>
     <AssemblyName>WpfClipboardMonitor</AssemblyName>
     <RootNamespace>WpfClipboardMonitor</RootNamespace>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
     <Authors>Ralf Beckers</Authors>
     <Company>Ralf Beckers</Company>
     <Description>WPF clipboard monitor to notify on clipboard update</Description>
-    <Copyright>Copyright © Ralf Beckers 2019</Copyright>
+    <Copyright>Copyright © 2019 - 2021 by Ralf Beckers</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/Bassman2/WpfClipboardMonitor</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Bassman.snk</AssemblyOriginatorKeyFile>
+    <PackageProjectUrl>https://github.com/Bassman2/WpfClipboardMonitor</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
