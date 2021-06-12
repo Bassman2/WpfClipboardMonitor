@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   build:
 
-    runs-on: windows-2019
+    runs-on: windows-latest
     strategy:
       max-parallel: 2
       matrix:
@@ -18,6 +18,9 @@ jobs:
 
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.0.0
+
+    - name: Setup NuGet.exe
+      uses: nuget/setup-nuget@v1
 
     - name: "Download and install sandcastle"
       run: |
@@ -33,32 +36,25 @@ jobs:
       shell: pwsh
       working-directory: .
 
+- name: copy dummy key for signing
+      working-directory: .
+      run: |
+           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor50\Bassman.snk
+           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor60\Bassman.snk
+           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorCore31\Bassman.snk
+           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework40\Bassman.snk
 
     - name: restore
       working-directory: .
-      run: msbuild WpfClipboardMonitor.sln /m /verbosity:minimal /t:restore /p:configuration="${{ matrix.build_configuration }}" /p:platform="${{ matrix.build_platform }}"
+      run: nuget restore WpfClipboardMonitor.sln
+
+#    - name: restore
+#      working-directory: .
+#      run: msbuild WpfClipboardMonitor.sln /m /verbosity:minimal /t:restore /p:configuration="${{ matrix.build_configuration }}" /p:platform="${{ matrix.build_platform }}"
 
     - name: MSBuild of solution
       working-directory: .
       run: |
-           $env:SHFBROOT = "C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
-           msbuild WpfClipboardMonitor.sln /m /verbosity:minimal /p:configuration="${{ matrix.build_configuration }}" /p:platform="${{ matrix.build_platform }}"
-
-    - name: Setup NuGet.exe
-      if: matrix.build_configuration == 'Release'
-      uses: nuget/setup-nuget@v1
-
-    - name: Build NuGet package
-      if: matrix.build_configuration == 'Release'
-      working-directory: .
-      run: |
-           cd .\Nuget
-           nuget pack WpfClipboardMonitor.nuspec -properties Configuration=${{ matrix.build_configuration }}
-
-    - name: Archive artifacts
-      if: matrix.build_configuration == 'Release'
-      uses: actions/upload-artifact@v1
-      with:
-          name: WpfClipboardMonitor.1.2.0.nupkg
-          path: Nuget\WpfClipboardMonitor.1.2.0.nupkg
+           $env:SHFBROOT="C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
+           msbuild WpfClipboardMonitor.sln -t:Rebuild -p:Configuration="${{ matrix.build_configuration }}" -v:minimal
 
