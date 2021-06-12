@@ -36,7 +36,7 @@ jobs:
       shell: pwsh
       working-directory: .
 
-- name: copy dummy key for signing
+    - name: copy dummy key for signing
       working-directory: .
       run: |
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor50\Bassman.snk
