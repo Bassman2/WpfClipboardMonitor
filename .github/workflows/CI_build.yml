@@ -49,6 +49,10 @@ jobs:
 
     - name: set environment
       working-directory: .
+      run: echo "{SHFBROOT}={C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\}" >> $GITHUB_ENV
+
+    - name: show environment
+      working-directory: .
       run: echo "Folder $SHFBROOT !"
 
     - name: restore
