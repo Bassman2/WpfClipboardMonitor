@@ -58,5 +58,5 @@ jobs:
       working-directory: .
       run: |
            $env:SHFBROOT="C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
-           msbuild WpfClipboardMonitor.sln -t:Rebuild -p:Configuration="${{ matrix.build_configuration }}" -v:minimal
+           msbuild WpfClipboardMonitor.sln -t:Rebuild -p:Configuration="${{ matrix.build_configuration }}" -v:minimal  -ignoreProjectExtensions:.shfbproj
 
