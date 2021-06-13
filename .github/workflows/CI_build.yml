@@ -11,9 +11,6 @@ jobs:
       matrix:
         build_configuration: [Release, Debug]
         build_platform: [Any CPU]
-    env:
-      SHFBROOT: "C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
-      
         
     steps:
     - name: Checkout repo
