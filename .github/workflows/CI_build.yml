@@ -11,6 +11,9 @@ jobs:
       matrix:
         build_configuration: [Release, Debug]
         build_platform: [Any CPU]
+    env:
+      SHFBROOT: "C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
+      
         
     steps:
     - name: Checkout repo
@@ -46,7 +49,7 @@ jobs:
 
     - name: set environment
       working-directory: .
-      run: $env:SHFBROOT="C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
+      run: echo "Folder $SHFBROOT !"
 
     - name: restore
       working-directory: .
