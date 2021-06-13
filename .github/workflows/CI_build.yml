@@ -45,16 +45,19 @@ jobs:
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework40\Bassman.snk
 
     - name: set environment
-      working-directory: .
-      run: echo "SHFBROOT=C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\" >> $GITHUB_ENV
+      run: |
+           echo "SHFBROOT=Test" >> $GITHUB_ENV
+           echo "SHFBROOT = ${{ env.SHFBROOT }} !"
 
     - name: show environment
-      working-directory: .
-      run: echo "Folder ${{ env.SHFBROOT }} !"
+      run: |
+           echo "SHFBROOT = ${{ env.SHFBROOT }} !"
 
     - name: restore
       working-directory: .
-      run: nuget restore WpfClipboardMonitor.sln
+      run: |
+           $env:SHFBROOT="C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
+           nuget restore WpfClipboardMonitor.sln
 
 #    - name: restore
 #      working-directory: .
