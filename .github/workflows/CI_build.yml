@@ -46,7 +46,9 @@ jobs:
 
     - name: restore
       working-directory: .
-      run: nuget restore WpfClipboardMonitor.sln
+      run: |
+           $env:SHFBROOT="C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
+           nuget restore WpfClipboardMonitor.sln
 
 #    - name: restore
 #      working-directory: .
