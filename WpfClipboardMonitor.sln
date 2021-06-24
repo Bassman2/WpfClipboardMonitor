@@ -36,6 +36,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCatcherOverrideFramework40", "Demo\Demo .NET Framework 4.0\ImageCatcherOverrideFramework40\ImageCatcherOverrideFramework40.csproj", "{5A23E36D-80D7-40BF-8CF4-53B955B62A77}"
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "WpfClipboardMonitorDoc", "Doc\WpfClipboardMonitorDoc\WpfClipboardMonitorDoc.shfbproj", "{505B0644-89B7-424D-88BE-9949C6D6FF9A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7F6B05D7-CE01-43D7-A869-CA3E69192D69} = {7F6B05D7-CE01-43D7-A869-CA3E69192D69}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo Share", "Demo Share", "{9DB84914-C52A-4DD4-9403-46345AE41BEB}"
 EndProject
