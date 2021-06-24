@@ -35,16 +35,6 @@ jobs:
            Write-Host "Sandcastle installed" -ForegroundColor Green
       shell: pwsh
       working-directory: .
-
-    - name: Set the value
-      id: step_one
-      run: |
-           echo "action_state=yellow" >> $GITHUB_ENV
-           
-    - name: Use the value
-      id: step_two
-      run: |
-           echo "${{ env.action_state }}" # This will output 'yellow'
       
     - name: copy dummy key for signing
       working-directory: .
@@ -54,15 +44,6 @@ jobs:
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorCore31\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework40\Bassman.snk
 
-    - name: set environment
-      run: |
-           echo "SHFBROOT=Test" >> $GITHUB_ENV
-           echo "SHFBROOT = ${{ env.SHFBROOT }} !"
-
-
-    - name: show environment
-      run: |
-           echo "SHFBROOT = ${{ env.SHFBROOT }} !"
 
     - name: restore
       working-directory: .
@@ -78,8 +59,4 @@ jobs:
       working-directory: .
       run: |
            $env:SHFBROOT="C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
-           msbuild WpfClipboardMonitor.sln -p:Configuration="${{ matrix.build_configuration }}"
-
-#           -ignoreProjectExtensions:.shfbproj
-
-
+           msbuild WpfClipboardMonitor.sln -p:Configuration="${{ matrix.build_configuration }}" /verbosity:minimal
