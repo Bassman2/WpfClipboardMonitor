@@ -40,7 +40,7 @@ jobs:
     #  uses: github/codeql-action/autobuild@v1
 
     # ℹ️ Command-line programs to run using the OS shell.
-    # 📚 https://git.io/JvXDl
+    # �� https://git.io/JvXDl
 
     # ✏️ If the Autobuild fails above, remove it and uncomment the following three lines
     #    and modify them (or add more) to build your code if your project
@@ -49,6 +49,9 @@ jobs:
     #- run: |
     #   make bootstrap
     #   make release
+
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1
 
     - name: "Download and install sandcastle"
       run: |
@@ -67,24 +70,22 @@ jobs:
     - name: copy dummy key for signing
       working-directory: .
       run: |
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor50\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor60\Bassman.snk
+           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor50\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorCore31\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework40\Bassman.snk
 
-    - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1
-
     - name: restore
       working-directory: .
-      run: msbuild WpfClipboardMonitor.sln /m /verbosity:minimal /t:restore /p:configuration="Release" /p:platform="Any CPU"
-
+      run: |
+           $env:SHFBROOT="C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
+           nuget restore WpfClipboardMonitor.sln
+    
     - name: MSBuild of solution
       working-directory: .
       run: |
            $env:SHFBROOT = "C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
-           msbuild WpfClipboardMonitor.sln /m /verbosity:minimal /p:configuration="Release" /p:platform="Any CPU"
-
+           msbuild WpfClipboardMonitor.sln /p:configuration="Release" /verbosity:minimal
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
