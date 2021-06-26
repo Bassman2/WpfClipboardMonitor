@@ -34,10 +34,8 @@ jobs:
            . "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VSIXInstaller.exe" /q /a InstallResources\SHFBVisualStudioPackage_VS2017AndLater.vsix
            Write-Host "Sandcastle installed" -ForegroundColor Green
       shell: pwsh
-      working-directory: .
       
     - name: Copy dummy key for signing
-      working-directory: .
       run: |
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor60\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor50\Bassman.snk
@@ -45,9 +43,7 @@ jobs:
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework40\Bassman.snk
 
     - name: Nuget restore
-      working-directory: .
       run: nuget restore WpfClipboardMonitor.sln
 
     - name: MSBuild of solution
-      working-directory: .
       run: msbuild WpfClipboardMonitor.sln -p:Configuration="${{ matrix.build_configuration }}" /m /verbosity:minimal
