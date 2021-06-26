@@ -49,5 +49,5 @@ jobs:
       run: msbuild WpfClipboardMonitor.sln /p:configuration="${{ matrix.build_configuration }}" /m /verbosity:minimal
 
     - name: Nuget pack nuspec
-      working-directory: .
-      run: nuget pack Nuget\WpfClipboardMonitor.nuspec -properties Configuration="${{ matrix.build_configuration }}"
+      working-directory: .\Nuget\
+      run: nuget pack WpfClipboardMonitor.nuspec -properties Configuration="${{ matrix.build_configuration }}"
