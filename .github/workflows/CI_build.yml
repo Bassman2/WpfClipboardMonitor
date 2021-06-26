@@ -9,7 +9,6 @@ jobs:
       max-parallel: 2
       matrix:
         build_configuration: [Release, Debug]
-        build_platform: [Any CPU]
     env:
       SHFBROOT: C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
         
@@ -20,7 +19,7 @@ jobs:
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1
 
-    - name: Setup NuGet.exe
+    - name: Setup NuGet
       uses: nuget/setup-nuget@v1
 
     - name: "Download and install sandcastle"
@@ -37,26 +36,18 @@ jobs:
       shell: pwsh
       working-directory: .
       
-    - name: copy dummy key for signing
+    - name: Copy dummy key for signing
       working-directory: .
       run: |
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor50\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor60\Bassman.snk
+           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor50\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorCore31\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework40\Bassman.snk
 
-
-    - name: restore
+    - name: Nuget restore
       working-directory: .
       run: nuget restore WpfClipboardMonitor.sln
 
-#|
-#           $env:SHFBROOT="C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
-           
-#    - name: restore
-#      working-directory: .
-#      run: msbuild WpfClipboardMonitor.sln /m /verbosity:minimal /t:restore /p:configuration="${{ matrix.build_configuration }}" /p:platform="${{ matrix.build_platform }}"
-
     - name: MSBuild of solution
       working-directory: .
-      run: msbuild WpfClipboardMonitor.sln -p:Configuration="${{ matrix.build_configuration }}" /verbosity:minimal
+      run: msbuild WpfClipboardMonitor.sln -p:Configuration="${{ matrix.build_configuration }}" /m /verbosity:minimal
