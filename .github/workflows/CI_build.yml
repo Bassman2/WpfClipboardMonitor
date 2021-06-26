@@ -42,8 +42,8 @@ jobs:
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorCore31\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework40\Bassman.snk
 
-    - name: Nuget restore
+    - name: Nuget restore solution
       run: nuget restore WpfClipboardMonitor.sln
 
     - name: MSBuild of solution
-      run: msbuild WpfClipboardMonitor.sln -p:Configuration="${{ matrix.build_configuration }}" /m /verbosity:minimal
+      run: msbuild WpfClipboardMonitor.sln /p:configuration="${{ matrix.build_configuration }}" /m /verbosity:minimal
