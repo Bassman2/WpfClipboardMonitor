@@ -4,13 +4,14 @@ on: [push, pull_request]
 
 jobs:
   build:
-
     runs-on: windows-2019
     strategy:
       max-parallel: 2
       matrix:
         build_configuration: [Release, Debug]
         build_platform: [Any CPU]
+    env:
+      SHFBROOT: C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
         
     steps:
     - name: Checkout repo
@@ -47,16 +48,15 @@ jobs:
 
     - name: restore
       working-directory: .
-      run: |
-           $env:SHFBROOT="C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
-           nuget restore WpfClipboardMonitor.sln
+      run: nuget restore WpfClipboardMonitor.sln
 
+#|
+#           $env:SHFBROOT="C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
+           
 #    - name: restore
 #      working-directory: .
 #      run: msbuild WpfClipboardMonitor.sln /m /verbosity:minimal /t:restore /p:configuration="${{ matrix.build_configuration }}" /p:platform="${{ matrix.build_platform }}"
 
     - name: MSBuild of solution
       working-directory: .
-      run: |
-           $env:SHFBROOT="C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
-           msbuild WpfClipboardMonitor.sln -p:Configuration="${{ matrix.build_configuration }}" /verbosity:minimal
+      run: msbuild WpfClipboardMonitor.sln -p:Configuration="${{ matrix.build_configuration }}" /verbosity:minimal
