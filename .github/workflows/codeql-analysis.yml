@@ -55,14 +55,14 @@ jobs:
 
     - name: "Download and install sandcastle"
       run: |
-           $url = "https://github.com/EWSoftware/SHFB/releases/download/v2021.4.9.0/SHFBInstaller_v2021.4.9.0.zip"
+           $url = "https://github.com/EWSoftware/SHFB/releases/download/v2022.12.30.0/SHFBInstaller_2022.12.30.0.zip"
            $output = "$env:GITHUB_WORKSPACE\SHFBInstaller_v2021.4.9.0.zip"
            (New-Object System.Net.WebClient).DownloadFile($url, $output)
            7z x -y SHFBInstaller_v2021.4.9.0.zip | Out-Null
            Write-Host "Installing MSI..."
            cmd /c start /wait msiexec /i InstallResources\SandcastleHelpFileBuilder.msi /quiet
            Write-Host "Installing VSIX..."
-           . "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VSIXInstaller.exe" /q /a InstallResources\SHFBVisualStudioPackage_VS2017AndLater.vsix
+           . "C:\Program Files (x86)\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\VSIXInstaller.exe" /q /a InstallResources\SHFBVisualStudioPackage_VS2022AndLater.vsix
            Write-Host "Sandcastle installed" -ForegroundColor Green
       shell: pwsh
       working-directory: .
