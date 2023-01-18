@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29230.61
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WpfClipboardMonitorShare", "Src\WpfClipboardMonitorShare\WpfClipboardMonitorShare.shproj", "{E0EC90C2-32BD-4E1F-AEFA-FB542E1604BB}"
 EndProject
@@ -48,11 +48,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo .NET Framework 4.0", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo .NET 5.0", "Demo .NET 5.0", "{E7932CCC-E3CA-4157-B278-8260EC327D2E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo .NET 6.0", "Demo .NET 6.0", "{7EA783B2-3E8E-47A1-B738-33313CC3AB86}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{BB9CB8A0-6F51-4D76-AB84-05053A62E3BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{A55C2D44-09F1-44D6-AA65-75CA00A60E53}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfClipboardMonitor50", "Src\WpfClipboardMonitor50\WpfClipboardMonitor50.csproj", "{7F6B05D7-CE01-43D7-A869-CA3E69192D69}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfClipboardMonitor60", "Src\WpfClipboardMonitor60\WpfClipboardMonitor60.csproj", "{9249912D-7BB9-45D4-B564-22E7762C4609}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCatcherEvent50", "Demo\Demo .NET 5.0\ImageCatcherEvent50\ImageCatcherEvent50.csproj", "{449E34D8-0C90-4227-9556-C8C9946EB344}"
 EndProject
@@ -62,29 +66,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCatcherMvvm50", "Demo\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCatcherOverride50", "Demo\Demo .NET 5.0\ImageCatcherOverride50\ImageCatcherOverride50.csproj", "{FC9BC99C-03DA-40B6-88D7-CFB912F206BF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCatcherEvent60", "Demo\Demo .NET 6.0\ImageCatcherEvent60\ImageCatcherEvent60.csproj", "{6BCE405E-C46F-4AB4-B6AD-5C2E0565AB36}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCatcherMember60", "Demo\Demo .NET 6.0\ImageCatcherMember60\ImageCatcherMember60.csproj", "{B13A218B-7F21-48A3-8A7A-22B7E61F1433}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCatcherMvvm60", "Demo\Demo .NET 6.0\ImageCatcherMvvm60\ImageCatcherMvvm60.csproj", "{928AEBAB-FEAD-4A73-9275-1BA91DE7ABEE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCatcherOverride60", "Demo\Demo .NET 6.0\ImageCatcherOverride60\ImageCatcherOverride60.csproj", "{857762BF-1B62-4A86-B89E-FDF03F7B9E68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfClipboardMonitor70", "Src\WpfClipboardMonitor70\WpfClipboardMonitor70.csproj", "{11D5BDFF-BE5C-4AE4-BC69-BA770CF65C1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo .NET 7.0", "Demo .NET 7.0", "{C68C550A-6948-45E6-A60A-85CA9129A79A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCatcherEvent70", "Demo\Demo .NET 7.0\ImageCatcherEvent70\ImageCatcherEvent70.csproj", "{4B122AED-7B97-4440-944F-348B1C6CB626}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCatcherMember70", "Demo\Demo .NET 7.0\ImageCatcherMember70\ImageCatcherMember70.csproj", "{D657AB93-428A-4381-8709-8E97874E43B7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCatcherMvvm70", "Demo\Demo .NET 7.0\ImageCatcherMvvm70\ImageCatcherMvvm70.csproj", "{E06F53D0-501D-4393-A607-7ABC33FA84D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCatcherOverride70", "Demo\Demo .NET 7.0\ImageCatcherOverride70\ImageCatcherOverride70.csproj", "{01CA79F9-586E-4334-A658-C218D2869041}"
+EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Src\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems*{01a961bf-ec59-450b-84b2-493cd4821562}*SharedItemsImports = 5
-		Demo\Demo Share\ImageCatcherMvvmShare\ImageCatcherMvvmShare.projitems*{133ecbfb-69e8-4206-b1b7-eee1c1ab38b7}*SharedItemsImports = 4
-		Demo\Demo Share\ImageCatcherMemberShare\ImageCatcherMemberShare.projitems*{3db49530-640e-41d2-b6d9-38c4ab9799b4}*SharedItemsImports = 4
-		Demo\Demo Share\ImageCatcherEventShare\ImageCatcherEventShare.projitems*{449e34d8-0c90-4227-9556-c8c9946eb344}*SharedItemsImports = 5
-		Demo\Demo Share\ImageCatcherMemberShare\ImageCatcherMemberShare.projitems*{55b3a8cc-a24d-4236-917c-6cb91c966cbd}*SharedItemsImports = 13
-		Demo\Demo Share\ImageCatcherOverrideShare\ImageCatcherOverrideShare.projitems*{5a23e36d-80d7-40bf-8cf4-53b955b62a77}*SharedItemsImports = 4
-		Demo\Demo Share\ImageCatcherOverrideShare\ImageCatcherOverrideShare.projitems*{6434c43d-795d-44e0-b628-4e77b6de88d1}*SharedItemsImports = 5
-		Demo\Demo Share\ImageCatcherEventShare\ImageCatcherEventShare.projitems*{69dba47a-dc1d-44a8-8aa7-33de30c8048f}*SharedItemsImports = 4
-		Src\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems*{6bddb3e3-26f2-4544-a722-d0037f804553}*SharedItemsImports = 4
-		Demo\Demo Share\ImageCatcherMvvmShare\ImageCatcherMvvmShare.projitems*{70b67e62-0bad-4ca0-a65f-cc49e410083a}*SharedItemsImports = 13
-		Src\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems*{7f6b05d7-ce01-43d7-a869-ca3e69192d69}*SharedItemsImports = 5
-		Demo\Demo Share\ImageCatcherMvvmShare\ImageCatcherMvvmShare.projitems*{8578cbd9-3559-4c5d-8bc4-8e2709b42552}*SharedItemsImports = 5
-		Demo\Demo Share\ImageCatcherEventShare\ImageCatcherEventShare.projitems*{b1292dfb-953a-4d7e-a356-f852a853d4b1}*SharedItemsImports = 5
-		Demo\Demo Share\ImageCatcherMemberShare\ImageCatcherMemberShare.projitems*{c1e44fc2-5b5e-4f2a-b25b-5f63fa771a02}*SharedItemsImports = 5
-		Demo\Demo Share\ImageCatcherMvvmShare\ImageCatcherMvvmShare.projitems*{c5a31a67-7fed-4227-b173-0a3361a6c4dd}*SharedItemsImports = 5
-		Src\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems*{e0ec90c2-32bd-4e1f-aefa-fb542e1604bb}*SharedItemsImports = 13
-		Demo\Demo Share\ImageCatcherEventShare\ImageCatcherEventShare.projitems*{e2210f7f-eb3e-437c-b3b7-cfe1ab241136}*SharedItemsImports = 13
-		Demo\Demo Share\ImageCatcherOverrideShare\ImageCatcherOverrideShare.projitems*{e52c7808-5274-4c97-a63d-6cda29ae1ba8}*SharedItemsImports = 13
-		Demo\Demo Share\ImageCatcherMemberShare\ImageCatcherMemberShare.projitems*{f7721d92-a709-419c-ab2a-19dd46c090c5}*SharedItemsImports = 5
-		Demo\Demo Share\ImageCatcherOverrideShare\ImageCatcherOverrideShare.projitems*{fc9bc99c-03da-40b6-88d7-cfb912f206bf}*SharedItemsImports = 5
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -138,6 +140,10 @@ Global
 		{7F6B05D7-CE01-43D7-A869-CA3E69192D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F6B05D7-CE01-43D7-A869-CA3E69192D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F6B05D7-CE01-43D7-A869-CA3E69192D69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9249912D-7BB9-45D4-B564-22E7762C4609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9249912D-7BB9-45D4-B564-22E7762C4609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9249912D-7BB9-45D4-B564-22E7762C4609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9249912D-7BB9-45D4-B564-22E7762C4609}.Release|Any CPU.Build.0 = Release|Any CPU
 		{449E34D8-0C90-4227-9556-C8C9946EB344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{449E34D8-0C90-4227-9556-C8C9946EB344}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{449E34D8-0C90-4227-9556-C8C9946EB344}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -154,6 +160,42 @@ Global
 		{FC9BC99C-03DA-40B6-88D7-CFB912F206BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC9BC99C-03DA-40B6-88D7-CFB912F206BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC9BC99C-03DA-40B6-88D7-CFB912F206BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BCE405E-C46F-4AB4-B6AD-5C2E0565AB36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BCE405E-C46F-4AB4-B6AD-5C2E0565AB36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BCE405E-C46F-4AB4-B6AD-5C2E0565AB36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BCE405E-C46F-4AB4-B6AD-5C2E0565AB36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B13A218B-7F21-48A3-8A7A-22B7E61F1433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B13A218B-7F21-48A3-8A7A-22B7E61F1433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B13A218B-7F21-48A3-8A7A-22B7E61F1433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B13A218B-7F21-48A3-8A7A-22B7E61F1433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{928AEBAB-FEAD-4A73-9275-1BA91DE7ABEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{928AEBAB-FEAD-4A73-9275-1BA91DE7ABEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{928AEBAB-FEAD-4A73-9275-1BA91DE7ABEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{928AEBAB-FEAD-4A73-9275-1BA91DE7ABEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{857762BF-1B62-4A86-B89E-FDF03F7B9E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{857762BF-1B62-4A86-B89E-FDF03F7B9E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{857762BF-1B62-4A86-B89E-FDF03F7B9E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{857762BF-1B62-4A86-B89E-FDF03F7B9E68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11D5BDFF-BE5C-4AE4-BC69-BA770CF65C1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D5BDFF-BE5C-4AE4-BC69-BA770CF65C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D5BDFF-BE5C-4AE4-BC69-BA770CF65C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D5BDFF-BE5C-4AE4-BC69-BA770CF65C1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B122AED-7B97-4440-944F-348B1C6CB626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B122AED-7B97-4440-944F-348B1C6CB626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B122AED-7B97-4440-944F-348B1C6CB626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B122AED-7B97-4440-944F-348B1C6CB626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D657AB93-428A-4381-8709-8E97874E43B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D657AB93-428A-4381-8709-8E97874E43B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D657AB93-428A-4381-8709-8E97874E43B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D657AB93-428A-4381-8709-8E97874E43B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E06F53D0-501D-4393-A607-7ABC33FA84D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E06F53D0-501D-4393-A607-7ABC33FA84D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E06F53D0-501D-4393-A607-7ABC33FA84D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E06F53D0-501D-4393-A607-7ABC33FA84D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01CA79F9-586E-4334-A658-C218D2869041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01CA79F9-586E-4334-A658-C218D2869041}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01CA79F9-586E-4334-A658-C218D2869041}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01CA79F9-586E-4334-A658-C218D2869041}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -179,13 +221,57 @@ Global
 		{51038E12-99A2-4198-A381-20C0CB559662} = {CC80E5E0-99FE-4A56-8269-E78FEE576C9C}
 		{267679DA-BCBA-4179-AC5F-24FCE940DC25} = {CC80E5E0-99FE-4A56-8269-E78FEE576C9C}
 		{E7932CCC-E3CA-4157-B278-8260EC327D2E} = {CC80E5E0-99FE-4A56-8269-E78FEE576C9C}
+		{7EA783B2-3E8E-47A1-B738-33313CC3AB86} = {CC80E5E0-99FE-4A56-8269-E78FEE576C9C}
 		{7F6B05D7-CE01-43D7-A869-CA3E69192D69} = {A55C2D44-09F1-44D6-AA65-75CA00A60E53}
+		{9249912D-7BB9-45D4-B564-22E7762C4609} = {A55C2D44-09F1-44D6-AA65-75CA00A60E53}
 		{449E34D8-0C90-4227-9556-C8C9946EB344} = {E7932CCC-E3CA-4157-B278-8260EC327D2E}
 		{F7721D92-A709-419C-AB2A-19DD46C090C5} = {E7932CCC-E3CA-4157-B278-8260EC327D2E}
 		{C5A31A67-7FED-4227-B173-0A3361A6C4DD} = {E7932CCC-E3CA-4157-B278-8260EC327D2E}
 		{FC9BC99C-03DA-40B6-88D7-CFB912F206BF} = {E7932CCC-E3CA-4157-B278-8260EC327D2E}
+		{6BCE405E-C46F-4AB4-B6AD-5C2E0565AB36} = {7EA783B2-3E8E-47A1-B738-33313CC3AB86}
+		{B13A218B-7F21-48A3-8A7A-22B7E61F1433} = {7EA783B2-3E8E-47A1-B738-33313CC3AB86}
+		{928AEBAB-FEAD-4A73-9275-1BA91DE7ABEE} = {7EA783B2-3E8E-47A1-B738-33313CC3AB86}
+		{857762BF-1B62-4A86-B89E-FDF03F7B9E68} = {7EA783B2-3E8E-47A1-B738-33313CC3AB86}
+		{11D5BDFF-BE5C-4AE4-BC69-BA770CF65C1C} = {A55C2D44-09F1-44D6-AA65-75CA00A60E53}
+		{C68C550A-6948-45E6-A60A-85CA9129A79A} = {CC80E5E0-99FE-4A56-8269-E78FEE576C9C}
+		{4B122AED-7B97-4440-944F-348B1C6CB626} = {C68C550A-6948-45E6-A60A-85CA9129A79A}
+		{D657AB93-428A-4381-8709-8E97874E43B7} = {C68C550A-6948-45E6-A60A-85CA9129A79A}
+		{E06F53D0-501D-4393-A607-7ABC33FA84D3} = {C68C550A-6948-45E6-A60A-85CA9129A79A}
+		{01CA79F9-586E-4334-A658-C218D2869041} = {C68C550A-6948-45E6-A60A-85CA9129A79A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C204A062-DF46-43F5-8EB5-1B1ACAD5E9CB}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Src\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems*{01a961bf-ec59-450b-84b2-493cd4821562}*SharedItemsImports = 5
+		Demo\Demo Share\ImageCatcherOverrideShare\ImageCatcherOverrideShare.projitems*{01ca79f9-586e-4334-a658-c218d2869041}*SharedItemsImports = 5
+		Src\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems*{11d5bdff-be5c-4ae4-bc69-ba770cf65c1c}*SharedItemsImports = 5
+		Demo\Demo Share\ImageCatcherMvvmShare\ImageCatcherMvvmShare.projitems*{133ecbfb-69e8-4206-b1b7-eee1c1ab38b7}*SharedItemsImports = 4
+		Demo\Demo Share\ImageCatcherMemberShare\ImageCatcherMemberShare.projitems*{3db49530-640e-41d2-b6d9-38c4ab9799b4}*SharedItemsImports = 4
+		Demo\Demo Share\ImageCatcherEventShare\ImageCatcherEventShare.projitems*{449e34d8-0c90-4227-9556-c8c9946eb344}*SharedItemsImports = 5
+		Demo\Demo Share\ImageCatcherEventShare\ImageCatcherEventShare.projitems*{4b122aed-7b97-4440-944f-348b1c6cb626}*SharedItemsImports = 5
+		Demo\Demo Share\ImageCatcherMemberShare\ImageCatcherMemberShare.projitems*{55b3a8cc-a24d-4236-917c-6cb91c966cbd}*SharedItemsImports = 13
+		Demo\Demo Share\ImageCatcherOverrideShare\ImageCatcherOverrideShare.projitems*{5a23e36d-80d7-40bf-8cf4-53b955b62a77}*SharedItemsImports = 4
+		Demo\Demo Share\ImageCatcherOverrideShare\ImageCatcherOverrideShare.projitems*{6434c43d-795d-44e0-b628-4e77b6de88d1}*SharedItemsImports = 5
+		Demo\Demo Share\ImageCatcherEventShare\ImageCatcherEventShare.projitems*{69dba47a-dc1d-44a8-8aa7-33de30c8048f}*SharedItemsImports = 4
+		Demo\Demo Share\ImageCatcherEventShare\ImageCatcherEventShare.projitems*{6bce405e-c46f-4ab4-b6ad-5c2e0565ab36}*SharedItemsImports = 5
+		Src\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems*{6bddb3e3-26f2-4544-a722-d0037f804553}*SharedItemsImports = 4
+		Demo\Demo Share\ImageCatcherMvvmShare\ImageCatcherMvvmShare.projitems*{70b67e62-0bad-4ca0-a65f-cc49e410083a}*SharedItemsImports = 13
+		Src\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems*{7f6b05d7-ce01-43d7-a869-ca3e69192d69}*SharedItemsImports = 5
+		Demo\Demo Share\ImageCatcherOverrideShare\ImageCatcherOverrideShare.projitems*{857762bf-1b62-4a86-b89e-fdf03f7b9e68}*SharedItemsImports = 5
+		Demo\Demo Share\ImageCatcherMvvmShare\ImageCatcherMvvmShare.projitems*{8578cbd9-3559-4c5d-8bc4-8e2709b42552}*SharedItemsImports = 5
+		Src\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems*{9249912d-7bb9-45d4-b564-22e7762c4609}*SharedItemsImports = 5
+		Demo\Demo Share\ImageCatcherMvvmShare\ImageCatcherMvvmShare.projitems*{928aebab-fead-4a73-9275-1ba91de7abee}*SharedItemsImports = 5
+		Demo\Demo Share\ImageCatcherEventShare\ImageCatcherEventShare.projitems*{b1292dfb-953a-4d7e-a356-f852a853d4b1}*SharedItemsImports = 5
+		Demo\Demo Share\ImageCatcherMemberShare\ImageCatcherMemberShare.projitems*{b13a218b-7f21-48a3-8a7a-22b7e61f1433}*SharedItemsImports = 5
+		Demo\Demo Share\ImageCatcherMemberShare\ImageCatcherMemberShare.projitems*{c1e44fc2-5b5e-4f2a-b25b-5f63fa771a02}*SharedItemsImports = 5
+		Demo\Demo Share\ImageCatcherMvvmShare\ImageCatcherMvvmShare.projitems*{c5a31a67-7fed-4227-b173-0a3361a6c4dd}*SharedItemsImports = 5
+		Demo\Demo Share\ImageCatcherMemberShare\ImageCatcherMemberShare.projitems*{d657ab93-428a-4381-8709-8e97874e43b7}*SharedItemsImports = 5
+		Demo\Demo Share\ImageCatcherMvvmShare\ImageCatcherMvvmShare.projitems*{e06f53d0-501d-4393-a607-7abc33fa84d3}*SharedItemsImports = 5
+		Src\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems*{e0ec90c2-32bd-4e1f-aefa-fb542e1604bb}*SharedItemsImports = 13
+		Demo\Demo Share\ImageCatcherEventShare\ImageCatcherEventShare.projitems*{e2210f7f-eb3e-437c-b3b7-cfe1ab241136}*SharedItemsImports = 13
+		Demo\Demo Share\ImageCatcherOverrideShare\ImageCatcherOverrideShare.projitems*{e52c7808-5274-4c97-a63d-6cda29ae1ba8}*SharedItemsImports = 13
+		Demo\Demo Share\ImageCatcherMemberShare\ImageCatcherMemberShare.projitems*{f7721d92-a709-419c-ab2a-19dd46c090c5}*SharedItemsImports = 5
+		Demo\Demo Share\ImageCatcherOverrideShare\ImageCatcherOverrideShare.projitems*{fc9bc99c-03da-40b6-88d7-cfb912f206bf}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

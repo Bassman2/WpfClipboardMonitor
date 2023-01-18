@@ -26,7 +26,7 @@
       <Argument Key="logoAlignment" Value="left" xmlns="" />
       <Argument Key="maxVersionParts" Value="" xmlns="" />
     </TransformComponentArguments>
-    <HelpFileVersion>1.2.0.0</HelpFileVersion>
+    <HelpFileVersion>1.3.0.0</HelpFileVersion>
     <MaximumGroupParts>2</MaximumGroupParts>
     <NamespaceGrouping>False</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
@@ -39,7 +39,7 @@
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <ComponentConfigurations />
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\..\Src\WpfClipboardMonitor50\WpfClipboardMonitor50.csproj" />
+      <DocumentationSource sourceFile="..\..\Src\WpfClipboardMonitor70\WpfClipboardMonitor70.csproj" />
     </DocumentationSources>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="(global)" isDocumented="True" xmlns="" />
@@ -81,7 +81,6 @@
   <ItemGroup>
     <None Include="Content\VersionHistory.aml" />
     <None Include="Content\Welcome.aml" />
-    <None Include="WpfClipboardMonitor.chm" />
   </ItemGroup>
   <ItemGroup>
     <ContentLayout Include="ContentLayout.content" />

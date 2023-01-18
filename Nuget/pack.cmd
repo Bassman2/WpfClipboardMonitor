@@ -1,1 +1,1 @@
-nuget pack WpfClipboardMonitorPreview.nuspec -properties Configuration=Release
+nuget pack WpfClipboardMonitor.nuspec -properties Configuration=Release

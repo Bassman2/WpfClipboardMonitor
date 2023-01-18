@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: windows-2019
+    runs-on: windows-2022
     strategy:
       max-parallel: 2
       matrix:
@@ -27,6 +27,7 @@ jobs:
         
     - name: Copy dummy key for signing
       run: |
+           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor70\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor60\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor50\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorCore31\Bassman.snk

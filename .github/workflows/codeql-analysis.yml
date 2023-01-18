@@ -70,6 +70,7 @@ jobs:
     - name: copy dummy key for signing
       working-directory: .
       run: |
+           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor70\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor60\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor50\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorCore31\Bassman.snk
