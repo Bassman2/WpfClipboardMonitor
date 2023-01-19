@@ -32,6 +32,8 @@ jobs:
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor50\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorCore31\Bassman.snk
            Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework40\Bassman.snk
+           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework45\Bassman.snk
+           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework48\Bassman.snk
 
     - name: Nuget restore solution
       run: nuget restore WpfClipboardMonitor.sln
