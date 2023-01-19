@@ -14,10 +14,6 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v3
 
-    - uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '4.0'
-
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.1
 
