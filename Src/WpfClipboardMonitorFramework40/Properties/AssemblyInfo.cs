@@ -13,7 +13,7 @@ using System.Windows.Markup;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Ralf Beckers")]
 [assembly: AssemblyProduct("WpfClipboardMonitor")]
-[assembly: AssemblyCopyright("Copyright © 2019 - 2021 by Ralf Beckers")]
+[assembly: AssemblyCopyright("Copyright © 2019 - 2023 by Ralf Beckers")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
