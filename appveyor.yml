@@ -1,5 +1,5 @@
-version: 1.9.{build}
-image: Visual Studio 2019 Preview
+version: 1.2.0.{build}
+image: Visual Studio 2022
 
 
 platform:
@@ -10,17 +10,18 @@ configuration:
     - Debug
 
 install:
-    - nuget restore WpfClipboardMonitorPreview.sln
-
+    - copy /y "%APPVEYOR_BUILD_FOLDER%"\DummySignKey.snk "%APPVEYOR_BUILD_FOLDER%"\Src\WpfClipboardMonitor70\Bassman.snk
     - copy /y "%APPVEYOR_BUILD_FOLDER%"\DummySignKey.snk "%APPVEYOR_BUILD_FOLDER%"\Src\WpfClipboardMonitor60\Bassman.snk
     - copy /y "%APPVEYOR_BUILD_FOLDER%"\DummySignKey.snk "%APPVEYOR_BUILD_FOLDER%"\Src\WpfClipboardMonitor50\Bassman.snk
     - copy /y "%APPVEYOR_BUILD_FOLDER%"\DummySignKey.snk "%APPVEYOR_BUILD_FOLDER%"\Src\WpfClipboardMonitorCore31\Bassman.snk
     - copy /y "%APPVEYOR_BUILD_FOLDER%"\DummySignKey.snk "%APPVEYOR_BUILD_FOLDER%"\Src\WpfClipboardMonitorFramework40\Bassman.snk
+    - copy /y "%APPVEYOR_BUILD_FOLDER%"\DummySignKey.snk "%APPVEYOR_BUILD_FOLDER%"\Src\WpfClipboardMonitorFramework45\Bassman.snk
+    - copy /y "%APPVEYOR_BUILD_FOLDER%"\DummySignKey.snk "%APPVEYOR_BUILD_FOLDER%"\Src\WpfClipboardMonitorFramework48\Bassman.snk
 
     - ps: >-
-        Start-FileDownload 'https://github.com/EWSoftware/SHFB/releases/download/v2021.4.9.0/SHFBInstaller_v2021.4.9.0.zip'
+        Start-FileDownload 'https://github.com/EWSoftware/SHFB/releases/download/v2022.12.30.0/SHFBInstaller_2022.12.30.0.zip'
 
-        7z x -y SHFBInstaller_v2021.4.9.0.zip | Out-Null
+        7z x -y SHFBInstaller_2022.12.30.0.zip | Out-Null
 
         Write-Host "Installing MSI..."
 
@@ -28,20 +29,21 @@ install:
 
         Write-Host "Installing VSIX..."
 
-        . "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\VSIXInstaller.exe" /q /a InstallResources\SHFBVisualStudioPackage_VS2017AndLater.vsix
+        . "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VSIXInstaller.exe" /q /a InstallResources\SHFBVisualStudioPackage_VS2022AndLater.vsix
 
         Write-Host "Sandcastle installed" -ForegroundColor Green
 
-build_script:
     - set SHFBROOT=C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
+
+    - nuget restore WpfClipboardMonitor.sln
+
+build_script:
     - cd "%APPVEYOR_BUILD_FOLDER%"
     ####- msbuild WpfClipboardMonitor.sln /m /verbosity:minimal /t:restore /p:configuration="%configuration%" /p:platform="%platform%" /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
     - msbuild WpfClipboardMonitor.sln /m /verbosity:minimal /p:configuration="%configuration%" /p:platform="%platform%" /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
     ####- msbuild WpfClipboardMonitorPreview.sln /m /verbosity:minimal /t:restore /p:configuration="%configuration%" /p:platform="%platform%" /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
-    - msbuild WpfClipboardMonitorPreview.sln /m /verbosity:minimal /p:configuration="%configuration%" /p:platform="%platform%" /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
     - cd "%APPVEYOR_BUILD_FOLDER%"\Nuget
     - if "%configuration%"=="Release" nuget pack WpfClipboardMonitor.nuspec -properties Configuration=Release
-    - if "%configuration%"=="Release" nuget pack WpfClipboardMonitorPreview.nuspec -properties Configuration=Release
 
 #after_build:
 #     - cd "%APPVEYOR_BUILD_FOLDER%"
