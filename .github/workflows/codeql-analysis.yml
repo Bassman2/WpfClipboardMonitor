@@ -62,7 +62,7 @@ jobs:
            Write-Host "Installing MSI..."
            cmd /c start /wait msiexec /i InstallResources\SandcastleHelpFileBuilder.msi /quiet
            Write-Host "Installing VSIX..."
-           . "C:\Program Files (x86)\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\VSIXInstaller.exe" /q /a InstallResources\SHFBVisualStudioPackage_VS2022AndLater.vsix
+           . "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\VSIXInstaller.exe" /q /a InstallResources\SHFBVisualStudioPackage_VS2022AndLater.vsix
            Write-Host "Sandcastle installed" -ForegroundColor Green
       shell: pwsh
       working-directory: .
