@@ -11,6 +11,15 @@ jobs:
         build_configuration: [Github]
         
     steps:
+    
+    - name: test
+      run: |
+           echo SIGNKEYFILE1: %SIGNKEYFILE% 
+           echo SIGNKEYFILE2: ${{ secrets.SIGNKEYFILE }} 
+      env: 
+           SIGNKEYFILE: ${{ secrets.SIGNKEYFILE }} 
+      shell: cmd
+      
     - name: Checkout repo
       uses: actions/checkout@v3
 
