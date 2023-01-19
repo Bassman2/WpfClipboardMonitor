@@ -16,9 +16,14 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Bassman.snk</AssemblyOriginatorKeyFile>
     <PackageProjectUrl>https://github.com/Bassman2/WpfClipboardMonitor</PackageProjectUrl>
+    <Configurations>Debug;Release;Github</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>.\WpfClipboardMonitor.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Github|AnyCPU'">
     <DocumentationFile>.\WpfClipboardMonitor.xml</DocumentationFile>
   </PropertyGroup>
 

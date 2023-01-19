@@ -18,6 +18,7 @@
 	<AssemblyName>WpfClipboardMonitor</AssemblyName>
 	<RootNamespace>WpfClipboardMonitor</RootNamespace>
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	<Configurations>Debug;Release;Github</Configurations>
   </PropertyGroup>
 
   <Import Project="..\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems" Label="Shared" />
