@@ -12,74 +12,42 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: windows-latest
+    runs-on: windows-2022
+    environment: sign
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    # Initializes the CodeQL tools for scanning.
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v2
-      # Override language selection by uncommenting this and choosing your languages
-      # with:
-      #   languages: go, javascript, csharp, python, cpp, java
-
-    # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
-    # If this step fails, then you should remove it and run the build manually (see below)
-    #- name: Autobuild
-    #  uses: github/codeql-action/autobuild@v1
-
-    # ℹ️ Command-line programs to run using the OS shell.
-    # �� https://git.io/JvXDl
-
-    # ✏️ If the Autobuild fails above, remove it and uncomment the following three lines
-    #    and modify them (or add more) to build your code if your project
-    #    uses a compiled language
-
-    #- run: |
-    #   make bootstrap
-    #   make release
-
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.3
+      
+    - name: Setup NuGet
+      uses: nuget/setup-nuget@v1
+      
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
 
-    - name: "Download and install sandcastle"
-      run: |
-           $url = "https://github.com/EWSoftware/SHFB/releases/download/v2022.12.30.0/SHFBInstaller_2022.12.30.0.zip"
-           $output = "$env:GITHUB_WORKSPACE\SHFBInstaller_2022.12.30.0.zip"
-           (New-Object System.Net.WebClient).DownloadFile($url, $output)
-           7z x -y SHFBInstaller_2022.12.30.0.zip | Out-Null
-           Write-Host "Installing MSI..."
-           cmd /c start /wait msiexec /i InstallResources\SandcastleHelpFileBuilder.msi /quiet
-           Write-Host "Installing VSIX..."
-           . "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\VSIXInstaller.exe" /q /a InstallResources\SHFBVisualStudioPackage_VS2022AndLater.vsix
-           Write-Host "Sandcastle installed" -ForegroundColor Green
-      shell: pwsh
-      working-directory: .
+    - name: Add SignKeys  
+      uses: Bassman2/SignKey@v1
+      with:
+        file: Bassman.snk
+        key: ${{ secrets.SIGNKEY }}
 
-    - name: copy dummy key for signing
-      working-directory: .
-      run: |
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor70\Bassman.snk
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor60\Bassman.snk
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor50\Bassman.snk
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorCore31\Bassman.snk
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework40\Bassman.snk
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework45\Bassman.snk
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework48\Bassman.snk
-
-    - name: restore
-      working-directory: .
-      run: |
-           $env:SHFBROOT="C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
-           nuget restore WpfClipboardMonitor.sln
+    - name: Install SHFB
+      uses: Bassman2/setup-SHFB@v1
+      with:
+        version: 2022.12.30.0
+    
+    - name: Nuget restore solution
+      run: nuget restore WpfClipboardMonitor.sln
+     
     
     - name: MSBuild of solution
       working-directory: .
-      run: |
-           $env:SHFBROOT = "C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\"
-           msbuild WpfClipboardMonitor.sln /p:configuration="Release" /verbosity:minimal
-
+      run: msbuild WpfClipboardMonitor.sln /p:configuration="Release" /verbosity:minimal
+      env:
+        SHFBROOT: C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
+           
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2

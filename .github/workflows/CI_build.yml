@@ -5,21 +5,13 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: windows-2022
+    environment: sign
     strategy:
       max-parallel: 2
       matrix:
         build_configuration: [Github]
         
     steps:
-    
-    - name: test
-      run: |
-           echo SIGNKEYFILE1: %SIGNKEYFILE% 
-           echo SIGNKEYFILE2: ${{ secrets.SIGNKEYFILE }} 
-      env: 
-           SIGNKEYFILE: ${{ secrets.SIGNKEYFILE }} 
-      shell: cmd
-      
     - name: Checkout repo
       uses: actions/checkout@v3
 
@@ -34,22 +26,25 @@ jobs:
       with:
         version: 2022.12.30.0
         
-    - name: Copy dummy key for signing
-      run: |
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor70\Bassman.snk
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor60\Bassman.snk
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitor50\Bassman.snk
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorCore31\Bassman.snk
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework40\Bassman.snk
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework45\Bassman.snk
-           Copy-Item  DummySignKey.snk -Destination Src\WpfClipboardMonitorFramework48\Bassman.snk
+    - name: Add SignKeys
+      uses: Bassman2/SignKey@v1
+      with:
+        file: Bassman.snk
+        key: ${{ secrets.SIGNKEY }}
+        
+    - name: Install SHFB
+      uses: Bassman2/setup-SHFB@v1
+      with:
+        version: 2022.12.30.0
 
     - name: Nuget restore solution
       run: nuget restore WpfClipboardMonitor.sln
 
     - name: MSBuild of solution
       run: msbuild WpfClipboardMonitor.sln /p:configuration="${{ matrix.build_configuration }}" /m /verbosity:minimal
-
+      env:
+        SHFBROOT: C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
+        
     - name: Nuget pack nuspec
       if: matrix.build_configuration == 'Release'
       working-directory: .\Nuget\
