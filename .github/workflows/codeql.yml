@@ -41,7 +41,7 @@ jobs:
       run: dotnet restore $env:Solution
     
     - name: MSBuild of solution
-      run: msbuild $env:Solution /p:configuration="Release"       
+      run: msbuild $env:Solution /p:configuration="Release" /verbosity:minimal      
            
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2

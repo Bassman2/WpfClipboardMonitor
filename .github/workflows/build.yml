@@ -43,7 +43,7 @@ jobs:
       run: dotnet restore $env:Solution
 
     - name: MSBuild of solution
-      run: msbuild $env:Solution /p:configuration="${{ matrix.build_configuration }}"    
+      run: msbuild $env:Solution /p:configuration="${{ matrix.build_configuration }}" /verbosity:minimal   
         
     - name: Nuget pack nuspec
       if: matrix.build_configuration == 'Release'
