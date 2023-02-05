@@ -99,7 +99,4 @@
     </PostBuildEvent>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Github' ">
-    <OutputPath>bin\Github\</OutputPath>
-  </PropertyGroup>
 </Project>

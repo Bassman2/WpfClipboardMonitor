@@ -6,11 +6,14 @@
 		</introduction>
 
 		<section>
-			<title>Version 1.3 was released on Jan 18, 2023.</title>
+			<title>Version 1.3 was released on Feb 5, 2023.</title>
 			<content>
 				<list class="bullet">
 					<listItem>
 						<para>Support for .Net 7.0</para>
+					</listItem>
+					<listItem>
+						<para>Remove out of support .NET versions</para>
 					</listItem>
 				</list>
 			</content>

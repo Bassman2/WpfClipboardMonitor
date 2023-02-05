@@ -17,7 +17,7 @@
     <RepositoryType>Git</RepositoryType>
     <AssemblyName>WpfClipboardMonitor</AssemblyName>
     <RootNamespace>WpfClipboardMonitor</RootNamespace>
-    <Configurations>Debug;Release;Github</Configurations>
+    <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
   <Import Project="..\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems" Label="Shared" />
