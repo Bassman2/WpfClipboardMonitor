@@ -15,7 +15,6 @@ jobs:
     environment: sign
     env:
       Solution: WpfClipboardMonitor.sln
-      NugetSpc: WpfClipboardMonitor.nuspec
       SHFBROOT: C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
 
     steps:
