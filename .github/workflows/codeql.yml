@@ -1,10 +1,9 @@
-name: "CodeQL"
+name: CodeQL
 
 on:
   push:
-    branches: [master, ]
+    branches: [master,]
   pull_request:
-    # The branches below must be a subset of the branches above
     branches: [master]
   schedule:
     - cron: '0 23 * * 6'
@@ -15,18 +14,17 @@ jobs:
     runs-on: windows-2022
     environment: sign
     env:
+      Solution: WpfClipboardMonitor.sln
+      NugetSpc: WpfClipboardMonitor.nuspec
       SHFBROOT: C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
 
     steps:
-    - name: Checkout repository
+    - name: Checkout
       uses: actions/checkout@v3
 
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.3
-      
-    - name: Setup NuGet
-      uses: nuget/setup-nuget@v1
-      
+            
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
 
@@ -39,12 +37,11 @@ jobs:
     - name: Install SHFB
       uses: Bassman2/setup-SHFB@v1
     
-    - name: Nuget restore solution
-      run: nuget restore WpfClipboardMonitor.sln     
+    - name: Dotnet restore dependencies
+      run: dotnet restore $env:Solution
     
     - name: MSBuild of solution
-      working-directory: .
-      run: msbuild WpfClipboardMonitor.sln /p:configuration="Release" /verbosity:minimal
+      run: msbuild $env:Solution /p:configuration="Release"       
            
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
