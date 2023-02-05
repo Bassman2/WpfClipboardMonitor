@@ -7,11 +7,11 @@ jobs:
     runs-on: windows-2022
     environment: sign
     env:
-        SHFBROOT: C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
+      SHFBROOT: C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
     strategy:
       max-parallel: 2
       matrix:
-        build_configuration: [Github]
+        build_configuration: [Release, Debug]
         
     steps:
     - name: Checkout repo
