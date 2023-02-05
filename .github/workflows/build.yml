@@ -1,12 +1,17 @@
 name: Continuous Integration
 
-on: [push, pull_request]
+on: 
+  push:
+    branches: [ "master", ]
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
   build:
     runs-on: windows-2022
     environment: sign
     env:
+      SOLUTION: WpfClipboardMonitor.sln
       SHFBROOT: C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
     strategy:
       max-parallel: 2
@@ -14,7 +19,7 @@ jobs:
         build_configuration: [Release, Debug]
         
     steps:
-    - name: Checkout repo
+    - name: Checkout
       uses: actions/checkout@v3
 
     - name: Add msbuild to PATH
