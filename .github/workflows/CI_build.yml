@@ -6,6 +6,8 @@ jobs:
   build:
     runs-on: windows-2022
     environment: sign
+    env:
+        SHFBROOT: C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
     strategy:
       max-parallel: 2
       matrix:
@@ -20,12 +22,7 @@ jobs:
 
     - name: Setup NuGet
       uses: nuget/setup-nuget@v1
-
-    - name: Install SHFB
-      uses: Bassman2/setup-SHFB@v2
-      with:
-        version: 2022.12.30.0
-        
+    
     - name: Add SignKeys
       uses: Bassman2/SignKey@v1
       with:
@@ -34,16 +31,12 @@ jobs:
         
     - name: Install SHFB
       uses: Bassman2/setup-SHFB@v1
-      with:
-        version: 2022.12.30.0
 
     - name: Nuget restore solution
       run: nuget restore WpfClipboardMonitor.sln
 
     - name: MSBuild of solution
-      run: msbuild WpfClipboardMonitor.sln /p:configuration="${{ matrix.build_configuration }}" /m /verbosity:minimal
-      env:
-        SHFBROOT: C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
+      run: msbuild WpfClipboardMonitor.sln /p:configuration="${{ matrix.build_configuration }}" /m /verbosity:minimal      
         
     - name: Nuget pack nuspec
       if: matrix.build_configuration == 'Release'

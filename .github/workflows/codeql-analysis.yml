@@ -14,6 +14,8 @@ jobs:
     name: Analyze
     runs-on: windows-2022
     environment: sign
+    env:
+        SHFBROOT: C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
 
     steps:
     - name: Checkout repository
@@ -36,18 +38,13 @@ jobs:
 
     - name: Install SHFB
       uses: Bassman2/setup-SHFB@v1
-      with:
-        version: 2022.12.30.0
     
     - name: Nuget restore solution
-      run: nuget restore WpfClipboardMonitor.sln
-     
+      run: nuget restore WpfClipboardMonitor.sln     
     
     - name: MSBuild of solution
       working-directory: .
       run: msbuild WpfClipboardMonitor.sln /p:configuration="Release" /verbosity:minimal
-      env:
-        SHFBROOT: C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
            
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
