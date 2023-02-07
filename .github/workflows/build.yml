@@ -14,7 +14,6 @@ jobs:
     env:
       Solution: WpfClipboardMonitor.sln
       NugetSpc: WpfClipboardMonitor.nuspec
-      SHFBROOT: C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
     strategy:
       max-parallel: 2
       matrix:
