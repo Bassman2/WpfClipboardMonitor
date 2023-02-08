@@ -11,4 +11,4 @@ This implementation is Forms free and can also be used by MVVM.
 
 You are welcome to support this project. 
 
-[![Donate](https://raw.githubusercontent.com/Bassman2/MediaDevices/master/.github/images/donate.gif)](https://www.paypal.me/GBassman)
+[![Donate](https://raw.githubusercontent.com/Bassman2/WpfClipboardMonitor/master/.github/images/donate.gif)](https://www.paypal.me/GBassman)
