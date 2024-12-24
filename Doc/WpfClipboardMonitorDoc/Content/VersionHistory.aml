@@ -10,10 +10,7 @@
 			<content>
 				<list class="bullet">
 					<listItem>
-						<para>Support for .Net 7.0</para>
-					</listItem>
-					<listItem>
-						<para>Remove out of support .NET versions</para>
+						<para>Support for .Net 8.0 and 9.0</para>
 					</listItem>
 				</list>
 			</content>
