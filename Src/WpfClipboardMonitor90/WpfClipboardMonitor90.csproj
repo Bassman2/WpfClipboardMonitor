@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0-windows7.0</TargetFramework>
+    <TargetFramework>net9.0-windows7.0</TargetFramework>
 	<UseWPF>true</UseWPF>
 	<SignAssembly>true</SignAssembly>
 	<AssemblyOriginatorKeyFile>Bassman.snk</AssemblyOriginatorKeyFile>
@@ -10,7 +10,7 @@
 	<PackageId>WpfClipboardMonitor</PackageId>
 	<Product>WpfClipboardMonitor</Product>
 	<Description>WPF clipboard monitor to notify on clipboard update</Description>
-	<Copyright>Copyright © 2019 - 2023 by Ralf Beckers</Copyright>
+	<Copyright>Copyright © 2019 - 2024 by Ralf Beckers</Copyright>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageProjectUrl>https://github.com/Bassman2/WpfClipboardMonitor</PackageProjectUrl>
 	<RepositoryUrl>https://github.com/Bassman2/WpfClipboardMonitor</RepositoryUrl>
@@ -19,6 +19,7 @@
 	<RootNamespace>WpfClipboardMonitor</RootNamespace>
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	<Configurations>Debug;Release</Configurations>
+	<SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
   <Import Project="..\WpfClipboardMonitorShare\WpfClipboardMonitorShare.projitems" Label="Shared" />

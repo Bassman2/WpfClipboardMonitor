@@ -4,7 +4,21 @@
 		<introduction>
 			<para>The topics in this section describe the various changes made to the WPF Clipboard Monitor over the life of the project.</para>
 		</introduction>
-
+		
+		<section>
+			<title>Version 1.4 was released on Dec 24, 2024.</title>
+			<content>
+				<list class="bullet">
+					<listItem>
+						<para>Support for .Net 7.0</para>
+					</listItem>
+					<listItem>
+						<para>Remove out of support .NET versions</para>
+					</listItem>
+				</list>
+			</content>
+		</section>
+		
 		<section>
 			<title>Version 1.3 was released on Feb 5, 2023.</title>
 			<content>
