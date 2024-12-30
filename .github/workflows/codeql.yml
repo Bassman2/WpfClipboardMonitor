@@ -15,21 +15,21 @@ jobs:
     environment: sign
     env:
       Solution: WpfClipboardMonitor.sln
- 
+
     steps:
     - name: Checkout
       uses: actions/checkout@v4
 
     - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1.3
+      uses: microsoft/setup-msbuild@v2
 
     - name: Setup NuGet
-      uses: nuget/setup-nuget@v1    
-            
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v2
+      uses: nuget/setup-nuget@v2
 
-    - name: Add SignKeys  
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v3
+
+    - name: Add SignKeys
       uses: Bassman2/SignKey@v1
       with:
         file: Bassman.snk
@@ -37,15 +37,15 @@ jobs:
 
     - name: Install SHFB
       uses: Bassman2/setup-SHFB@v1
-    
+
     - name: Nuget restore dependencies
       run: nuget restore $env:Solution
 
     - name: Dotnet restore dependencies
       run: dotnet restore $env:Solution
-    
+
     - name: MSBuild of solution
-      run: msbuild $env:Solution /p:configuration="Release" /verbosity:minimal      
-           
+      run: msbuild $env:Solution /p:configuration="Release" /verbosity:minimal
+
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v2
+      uses: github/codeql-action/analyze@v3

@@ -17,7 +17,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ImageCatcherOverrideShare",
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "WpfClipboardMonitorDoc", "Doc\WpfClipboardMonitorDoc\WpfClipboardMonitorDoc.shfbproj", "{505B0644-89B7-424D-88BE-9949C6D6FF9A}"
 	ProjectSection(ProjectDependencies) = postProject
-		{11D5BDFF-BE5C-4AE4-BC69-BA770CF65C1C} = {11D5BDFF-BE5C-4AE4-BC69-BA770CF65C1C}
+		{8EE3D16F-B806-4561-B45B-94D506143627} = {8EE3D16F-B806-4561-B45B-94D506143627}
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo Share", "Demo Share", "{9DB84914-C52A-4DD4-9403-46345AE41BEB}"
