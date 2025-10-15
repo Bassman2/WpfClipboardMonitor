@@ -17,6 +17,8 @@ To get started, add the WpfClipboardMonitor package to your project.
   
 The ClipboardMonitor class can be used as a member of your main window.
 
+[!include[MainWindow.xaml.cs](..\Demo\Demo Share\ImageCatcherMemberShare\MainWindow.xaml.cs)]
+
 <code language="c#" source="..\..\Demo\Demo Share\ImageCatcherMemberShare\MainWindow.xaml.cs" title="MainWindow.xaml.cs"/>
 
 #### Example: Clipboard Monitor as window derived class with event
