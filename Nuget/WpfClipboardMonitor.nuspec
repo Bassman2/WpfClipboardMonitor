@@ -11,11 +11,12 @@
     <projectUrl>https://github.com/Bassman2/WpfClipboardMonitor</projectUrl>
     <description>WPF clipboard monitor to notify on clipboard update</description>
     <releaseNotes>remove unsupported frameworks</releaseNotes>
-    <copyright>Copyright 2017 - 2024 (c) Ralf Beckers. All rights reserved.</copyright>
+    <copyright>Copyright 2017 - 2025 (c) Ralf Beckers. All rights reserved.</copyright>
     <repository type="Github" url="https://github.com/Bassman2/WpfClipboardMonitor" />
     <tags>WPF MVVM Clipboard</tags>
     <readme>docs\README.md</readme>
     <dependencies>
+      <group targetFramework=".NET10.0-windows7.0" />
       <group targetFramework=".NET9.0-windows7.0" />
       <group targetFramework=".NET8.0-windows7.0" />
       <group targetFramework=".NET7.0-windows7.0" />
@@ -24,12 +25,12 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="..\Src\WpfClipboardMonitor90\bin\Release\net10.0-windows7.0\**" target="lib/net10.0-windows7.0" />
     <file src="..\Src\WpfClipboardMonitor90\bin\Release\net9.0-windows7.0\**" target="lib/net9.0-windows7.0" />
     <file src="..\Src\WpfClipboardMonitor80\bin\Release\net8.0-windows7.0\**" target="lib/net8.0-windows7.0" />
     <file src="..\Src\WpfClipboardMonitor70\bin\Release\net7.0-windows7.0\**" target="lib/net7.0-windows7.0" />
     <file src="..\Src\WpfClipboardMonitor60\bin\Release\net6.0-windows7.0\**" target="lib/net6.0-windows7.0" />
     <file src="..\Src\WpfClipboardMonitor48\bin\Release\**" target="lib/net4.8" />
-    <file src="..\Doc\WpfClipboardMonitorDoc\Help\WpfClipboardMonitor.chm" target="content" />
    <file src="..\README.md" target="docs\" />
     <file src="..\LICENSE" target="content" />
   </files>
