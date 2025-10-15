@@ -35,8 +35,8 @@ jobs:
         file: Bassman.snk
         key: ${{ secrets.SIGNKEY }}
 
-    - name: Nuget restore dependencies
-      run: nuget restore $env:Solution
+#    - name: Nuget restore dependencies
+#      run: nuget restore $env:Solution
 
     - name: Dotnet restore dependencies
       run: dotnet restore $env:Solution
