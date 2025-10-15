@@ -1,11 +1,6 @@
 <Solution>
   <Folder Name="/Demo/" />
-  <Folder Name="/Demo/Demo .NET 10.0/">
-    <Project Path="Demo/Demo .NET 10.0/ImageCatcherEvent100/ImageCatcherEvent100.csproj" />
-    <Project Path="Demo/Demo .NET 10.0/ImageCatcherMember100/ImageCatcherMember100.csproj" />
-    <Project Path="Demo/Demo .NET 10.0/ImageCatcherMvvm100/ImageCatcherMvvm100.csproj" />
-    <Project Path="Demo/Demo .NET 10.0/ImageCatcherOverride100/ImageCatcherOverride100.csproj" />
-  </Folder>
+  <Folder Name="/Demo/Demo .NET 10.0/" />
   <Folder Name="/Demo/Demo .NET 4.8/">
     <Project Path="Demo/Demo .NET 4.8/ImageCatcherEvent48/ImageCatcherEvent48.csproj" Id="399d3d68-9e64-4cae-8cfd-f49192fa59ae" />
     <Project Path="Demo/Demo .NET 4.8/ImageCatcherMember48/ImageCatcherMember48.csproj" Id="d024bd6e-0b14-4acb-af80-ce28bec0198c" />
@@ -43,7 +38,6 @@
     <Project Path="Demo/Demo Share/ImageCatcherOverrideShare/ImageCatcherOverrideShare.shproj" />
   </Folder>
   <Folder Name="/Src/">
-    <Project Path="Src/WpfClipboardMonitor100/WpfClipboardMonitor100.csproj" />
     <Project Path="Src/WpfClipboardMonitor48/WpfClipboardMonitor48.csproj" Id="cd85c3c6-4eec-4812-99ae-ade8e65a313a" />
     <Project Path="Src/WpfClipboardMonitor60/WpfClipboardMonitor60.csproj" />
     <Project Path="Src/WpfClipboardMonitor70/WpfClipboardMonitor70.csproj" />
