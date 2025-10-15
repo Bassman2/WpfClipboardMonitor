@@ -2,7 +2,7 @@
 
 ### Version 1.4 was released on Oct 15, 2025.
 
-* Support for .Net 8.0, 9.0 and 10.0
+* Support for .Net 8.0 and 9.0 
 
 ### Version 1.3 was released on Feb 5, 2023.
  
