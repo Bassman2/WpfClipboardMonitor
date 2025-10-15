@@ -17,13 +17,16 @@ To get started, add the WpfClipboardMonitor package to your project.
   
 The ClipboardMonitor class can be used as a member of your main window.
 
-[!code-csharp[](../Demo/Demo Share/ImageCatcherMemberShare/MainWindow.xaml.cs)]
+[!code-csharp[MainWindow.xaml.cs](../Demo/Demo Share/ImageCatcherMemberShare/MainWindow.xaml.cs)]
 
 <code language="c#" source="..\..\Demo\Demo Share\ImageCatcherMemberShare\MainWindow.xaml.cs" title="MainWindow.xaml.cs"/>
 
 #### Example: Clipboard Monitor as window derived class with event
 
 The ClipboardMonitarWindow class can be used as the base of your MainWindow with event handling.
+
+[!code-csharp[](../Demo/Demo Share/ImageCatcherEventShare/MainWindow.xaml)]
+[!code-csharp[](../Demo/Demo Share/ImageCatcherEventShare/MainWindow.xaml.cs)]
 
 <code language="xaml" source="..\..\Demo\Demo Share\ImageCatcherEventShare\MainWindow.xaml" title="MainWindow.xaml"/>
 <code language="c#" source="..\..\Demo\Demo Share\ImageCatcherEventShare\MainWindow.xaml.cs" title="MainWindow.xaml.cs"/>
@@ -33,6 +36,9 @@ The ClipboardMonitarWindow class can be used as the base of your MainWindow with
 
 The ClipboardMonitarWindow class can be used as the base of your MainWindow with a overwritten method.
 
+[!code-csharp[](../Demo/Demo Share/ImageCatcherOverrideShare/MainWindow.xaml)]
+[!code-csharp[](../Demo/Demo Share/ImageCatcherOverrideShare/MainWindow.xaml.cs)]
+
 <code language="xaml" source="..\..\Demo\Demo Share\ImageCatcherOverrideShare\MainWindow.xaml" title="MainWindow.xaml"/>
 <code language="c#" source="..\..\Demo\Demo Share\ImageCatcherOverrideShare\MainWindow.xaml.cs" title="MainWindow.xaml.cs"/>
 
@@ -40,6 +46,9 @@ The ClipboardMonitarWindow class can be used as the base of your MainWindow with
 #### Example: Clipboard Monitor as window derived class in a MVVM environment
 
 The ClipboardMonitarWindow class can be used as the base of your MainWindow with a command for MVVM architecture.
+
+[!code-csharp[MainWindow.xaml.cs](../Demo/Demo Share/ImageCatcherMvvmShare/MainWindow.xaml)]
+[!code-csharp[MainWindow.xaml.cs](../Demo/Demo Share/ImageCatcherMvvmShare/MainWindow.xaml.cs)]
 
 <code language="xaml" source="..\..\Demo\Demo Share\ImageCatcherMvvmShare\MainView.xaml" title="MainView.xaml"/>
 <code language="c#" source="..\..\Demo\Demo Share\ImageCatcherMvvmShare\MainViewModel.cs" title="MainViewModel.cs"/>
