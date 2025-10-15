@@ -7,6 +7,10 @@ This implementation is Forms free and can also be used by MVVM.
 
 [NuGet Package](https://www.nuget.org/packages/WpfClipboardMonitor/)
 
+## Documentation
+
+[Pages](https://bassman2.github.io/WpfClipboardMonitor/)
+
 ## Donate
 
 You are welcome to support this project. 
