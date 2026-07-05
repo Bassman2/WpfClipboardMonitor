@@ -5,7 +5,7 @@
     <UseWPF>true</UseWPF>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Bassman.snk</AssemblyOriginatorKeyFile>
-    <Version>1.4.0.0</Version>
+    <Version>1.5.0.0</Version>
     <Authors>Ralf Beckers</Authors>
     <PackageId>WpfClipboardMonitor</PackageId>
     <Product>WpfClipboardMonitor</Product>
